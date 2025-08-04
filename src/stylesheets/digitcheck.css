@@ -2,10 +2,6 @@ body
 {
     color:#246e2e;
 }
-header h1
-{
-    width: 12%;
-}
 main section
 {
     display: flex;
@@ -30,4 +26,21 @@ main section p
 main section label
 {
     font-weight: bold;
+}
+main section input[type="text"]
+{
+    width: 20.5em;
+}
+main section .green
+{
+    color: green;
+}
+main section .red
+{
+    color: red;
+}
+main section #gbtext
+{
+    display: flex;
+    flex-flow: row wrap;
 }

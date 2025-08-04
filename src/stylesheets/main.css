@@ -33,6 +33,7 @@ footer
     left: 0;
     bottom: 0;
     width:calc(100% - 1.35em);
+    color: white;
 }
 footer, header
 {
@@ -53,7 +54,7 @@ header img
 }
 header h1
 {
-    width: 10%;
+    width: 7em;
 }
 main h2
 {

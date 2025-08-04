@@ -11,9 +11,11 @@ pi =
 totalDigits = 0;
 goodDigits = [];
 badDigits = [];
+goodBadList = [];
 document.addEventListener("DOMContentLoaded", function()
 {
     let digitText = document.getElementById("pitext");
+    let goodBadText = document.getElementById("gbtext");
     let form = document.getElementById("piform");
     console.log("Digitcheck Script Ran");
     form.addEventListener("submit", function(event)
@@ -23,22 +25,48 @@ document.addEventListener("DOMContentLoaded", function()
         let formData = new FormData(this);
         for (let [key,value] of formData.entries())
             {
-                if (key = "pidigits")
+                totalDigits = 0;
+                goodBadList = [];
+                digitText.textContent = "";
+                goodBadText.textContent = "";
+                if (key == "pidigits")
                     {
                         for (let i = 0; i < value.length; i++)
                             {
                                 if (value[i] == pi[i])
                                     {
                                         totalDigits += 1;
-                                        goodDigits.append(value[i]);
+                                        goodDigits.push(value[i]);
                                     }
                                 else
                                     {
-                                        badDigits.append(value[i]);
+                                        badDigits.push(value[i]);
+                                    }
+                                goodBadList.push(parseInt(value[i]) === pi[i] ? "G" : "B");
+                            }
+                        digitText.textContent = totalDigits.toString() + " Correct Digits";
+                        goodBadText.textContent = "";
+                        for (let i = 0; i < value.length; i++)
+                            {
+                                if (goodBadList[i] == "G")
+                                    {
+                                        newDiv = document.createElement("div");
+                                        newDiv.classList.add("green");
+                                        newText = document.createElement("p");
+                                        newText.textContent = value[i].toString();
+                                        newDiv.appendChild(newText);
+                                        goodBadText.appendChild(newDiv);
+                                    }
+                                if (goodBadList[i] == "B")
+                                    {
+                                        newDiv = document.createElement("div");
+                                        newDiv.classList.add("red");
+                                        newText = document.createElement("p");
+                                        newText.textContent = value[i].toString();
+                                        newDiv.appendChild(newText);
+                                        goodBadText.appendChild(newDiv);
                                     }
                             }
-                        digitText.innerHTML = totalDigits.toString();
-                        totalDigits = 0;
                     }
             }
     });
