@@ -1,1 +1,74 @@
-/* Your styles go here */
+body
+{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #55c75f;
+    background-color:#298335;
+}
+nav a
+{
+    text-decoration: none;
+    color: #c6ffa5;
+    border: 1px solid #09350f;
+    background-color: #67da5c;
+    padding: 0.5em;
+}
+nav a:hover
+{
+    text-decoration: underline;
+    text-shadow: 1px 1px 1px #09350f;
+}
+.nav-item
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+footer
+{
+    padding: .5em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:calc(100% - 1.35em);
+}
+footer, header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3ef04d;
+    height:3em;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, #70ff7c, #27b333);
+    border-image-slice: 1;
+}
+main h2
+{
+    font-size: 1.75em;
+    text-decoration: underline;
+    font-weight: bold;
+    border: 3px solid #3cc448;
+    color: #69d477;
+}
+main article p
+{
+    font-size: 1.25em;
+    margin: 0.5em;
+}
+main article
+{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    background-color: white;
+    width: 60%;
+    padding: 14.8em 1em 14.8em 1em;
+    border-radius: 1em;
+}
