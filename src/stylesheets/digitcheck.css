@@ -1,0 +1,33 @@
+body
+{
+    color:#246e2e;
+}
+header h1
+{
+    width: 12%;
+}
+main section
+{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    background-color: white;
+    width: 60%;
+    padding: 12em 1em 12em 1em;
+    border-radius: 1em;
+}
+main section
+{
+    font-size: 1.25em;
+}
+main section p
+{
+    margin: 0.5em;
+}
+main section label
+{
+    font-weight: bold;
+}

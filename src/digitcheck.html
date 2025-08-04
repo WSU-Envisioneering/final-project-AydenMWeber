@@ -5,16 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/layout.css">
     <link rel="stylesheet" href="stylesheets/main.css">
+    <link rel="stylesheet" href="stylesheets/digitcheck.css">
     <script src="scripts/colors.js"></script>
-    <script src="scripts/mode.js"></script>
-    <title>Final Project Web 1400</title>
+    <script src="scripts/digitcheck.js"></script>
+    <title>Pi Digit Checker</title>
 </head>
-<body id="body" class="coloredGrad">
+<body id="body">
+    <script type="text/javascript">
+        function checkForm()
+        {
+            const form = document.getElementById("piform");
+            form.addEventListener("submit", function(event)
+                {
+                    event.preventDefault();
+                    const formData = new FormData(this);
+                    for (const [key,value] of formData.entries())
+                        {
+                            if (key = "pidigits")
+                                {
+                                    if(value > 200)
+                                    {
+                                        return false;
+                                        alert("Value is more than 200; it is: ", value);
+                                    }
+                                    else
+                                    {
+                                        return true;
+                                        alert("Value is less than 200; it is: ", value);
+                                    }  
+                                }
+                        }
+                })
+        }
+    </script>
     <header>
-        <h1 class="colored">Pi Digit Checker</h1>
+        <h1 class="colored">Digit Checker</h1>
+        <img src="images/pi.png" alt="Image of the mathematical constant pi">
     </header>
+    <nav>
+        <a href="index.html" class="nav-item">Homepage</a>
+        <a href="pidesc.html" class="nav-item">What is Pi?</a>
+        <a href="history.html" class="nav-item">History of Pi</a>
+    </nav>
     <main>
-        
+        <h2 class="coloredGrad">Digit Checker</h2>
+        <section>
+            <form method="GET" id="piform" name="piform" onsumbit="return checkForm();">
+                <label for="pidigits">Pi Checker (Up to 200 digits):</label>
+                <br>
+                <input type="text" id="pidigits" name="pidigits" placeholder="Type just digits of pi here.">
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+            <br>
+            <h3>Correct Digits of Pi:</h3>
+            <p id="pitext">0</p>
+        </section>
     </main>
     <footer>
 

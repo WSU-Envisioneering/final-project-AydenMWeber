@@ -46,6 +46,15 @@ footer, header
     border-image: linear-gradient(to bottom, #70ff7c, #27b333);
     border-image-slice: 1;
 }
+header img
+{
+    height: 1.5em;
+    width: 1.5em;
+}
+header h1
+{
+    width: 10%;
+}
 main h2
 {
     font-size: 1.75em;
