@@ -39,72 +39,11 @@ document.addEventListener("DOMContentLoaded", function()
                             }
                         digitText.textContent = totalDigits.toString() + " Correct Digits";
                         goodBadText.textContent = "";
-                        if (value.length > 2500 && window.innerWidth >= 1536)
+                        if (value.length > 2250 && window.innerWidth >= 1536)
                             {
-                                alert("More than 2500 digits!");
-                                for (let i = 0; i < 2500; i++)
+                                if(!confirm("More than 2000 digits! They may not be displayed properly. Do you want to override?"))
                                     {
-                                        if (goodBadList[i] == "G")
-                                            {
-                                                newDiv = document.createElement("div");
-                                                newDiv.classList.add("green");
-                                                newText = document.createElement("p");
-                                                newText.textContent = value[i].toString();
-                                                newDiv.appendChild(newText);
-                                                goodBadText.appendChild(newDiv);
-                                            }
-                                        if (goodBadList[i] == "B")
-                                            {
-                                                newDiv = document.createElement("div");
-                                                newDiv.classList.add("red");
-                                                newText = document.createElement("p");
-                                                newText.textContent = value[i].toString();
-                                                newDiv.appendChild(newText);
-                                                goodBadText.appendChild(newDiv);
-                                            }
-                                    }
-                                newDiv = document.createElement("div");
-                                newDiv.classList.add("red");
-                                newText = document.createElement("p");
-                                newText.textContent = " Too many Digits! Cannot show further digit validity."
-                                newDiv.appendChild(newText);
-                                goodBadText.appendChild(newDiv);
-                            }
-                        else if (value.length > 500 && window.innerWidth < 600)
-                            {
-                                alert("More than 500 digits!");
-                                for (let i = 0; i < 500; i++)
-                                    {
-                                        if (goodBadList[i] == "G")
-                                            {
-                                                newDiv = document.createElement("div");
-                                                newDiv.classList.add("green");
-                                                newText = document.createElement("p");
-                                                newText.textContent = value[i].toString();
-                                                newDiv.appendChild(newText);
-                                                goodBadText.appendChild(newDiv);
-                                            }
-                                        if (goodBadList[i] == "B")
-                                            {
-                                                newDiv = document.createElement("div");
-                                                newDiv.classList.add("red");
-                                                newText = document.createElement("p");
-                                                newText.textContent = value[i].toString();
-                                                newDiv.appendChild(newText);
-                                                goodBadText.appendChild(newDiv);
-                                            }
-                                    }
-                                newDiv = document.createElement("div");
-                                newDiv.classList.add("red");
-                                newText = document.createElement("p");
-                                newText.textContent = " Too many Digits! Cannot show further digit validity."
-                                newDiv.appendChild(newText);
-                                goodBadText.appendChild(newDiv);
-                            }
-                            else if (value.length > 1000 && window.innerWidth < 1536 && window.innerWidth > 600)
-                                {
-                                    alert("More than 1000 digits!");
-                                    for (let i = 0; i < 1000; i++)
+                                        for (let i = 0; i < 2000; i++)
                                         {
                                             if (goodBadList[i] == "G")
                                                 {
@@ -125,6 +64,146 @@ document.addEventListener("DOMContentLoaded", function()
                                                     goodBadText.appendChild(newDiv);
                                                 }
                                             }
+                                    }
+                                    else
+                                    {
+                                        for (let i = 0; i < 20000; i++)
+                                            {
+                                                if (goodBadList[i] == "G")
+                                                    {
+                                                        newDiv = document.createElement("div");
+                                                        newDiv.classList.add("green");
+                                                        newText = document.createElement("p");
+                                                        newText.textContent = value[i].toString();
+                                                        newDiv.appendChild(newText);
+                                                        goodBadText.appendChild(newDiv);
+                                                    }
+                                                if (goodBadList[i] == "B")
+                                                    {
+                                                        newDiv = document.createElement("div");
+                                                        newDiv.classList.add("red");
+                                                        newText = document.createElement("p");
+                                                        newText.textContent = value[i].toString();
+                                                        newDiv.appendChild(newText);
+                                                        goodBadText.appendChild(newDiv);
+                                                    }
+                                                }
+                                    }
+                                newDiv = document.createElement("div");
+                                newDiv.classList.add("red");
+                                newText = document.createElement("p");
+                                newText.textContent = " Too many Digits! Cannot show further digit validity."
+                                newDiv.appendChild(newText);
+                                goodBadText.appendChild(newDiv);
+                            }
+                        else if (value.length > 350 && window.innerWidth < 600)
+                            {
+                                if(!confirm("More than 350 digits! They may not be displayed properly. Do you want to override?"))
+                                    {
+                                        for (let i = 0; i < 350; i++)
+                                        {
+                                            if (goodBadList[i] == "G")
+                                                {
+                                                    newDiv = document.createElement("div");
+                                                    newDiv.classList.add("green");
+                                                    newText = document.createElement("p");
+                                                    newText.textContent = value[i].toString();
+                                                    newDiv.appendChild(newText);
+                                                    goodBadText.appendChild(newDiv);
+                                                }
+                                            if (goodBadList[i] == "B")
+                                                {
+                                                    newDiv = document.createElement("div");
+                                                    newDiv.classList.add("red");
+                                                    newText = document.createElement("p");
+                                                    newText.textContent = value[i].toString();
+                                                    newDiv.appendChild(newText);
+                                                    goodBadText.appendChild(newDiv);
+                                                }
+                                            }
+                                    }
+                                    else
+                                    {
+                                        for (let i = 0; i < 5000; i++)
+                                            {
+                                                if (goodBadList[i] == "G")
+                                                    {
+                                                        newDiv = document.createElement("div");
+                                                        newDiv.classList.add("green");
+                                                        newText = document.createElement("p");
+                                                        newText.textContent = value[i].toString();
+                                                        newDiv.appendChild(newText);
+                                                        goodBadText.appendChild(newDiv);
+                                                    }
+                                                if (goodBadList[i] == "B")
+                                                    {
+                                                        newDiv = document.createElement("div");
+                                                        newDiv.classList.add("red");
+                                                        newText = document.createElement("p");
+                                                        newText.textContent = value[i].toString();
+                                                        newDiv.appendChild(newText);
+                                                        goodBadText.appendChild(newDiv);
+                                                    }
+                                                }
+                                    }
+                                newDiv = document.createElement("div");
+                                newDiv.classList.add("red");
+                                newText = document.createElement("p");
+                                newText.textContent = " Too many Digits! Cannot show further digit validity."
+                                newDiv.appendChild(newText);
+                                goodBadText.appendChild(newDiv);
+                            }
+                            else if (value.length > 1000 && window.innerWidth < 1536 && window.innerWidth > 600)
+                                {
+                                    if(!confirm("More than 1000 digits! They may not be displayed properly. Do you want to override?"))
+                                        {
+                                            for (let i = 0; i < 1000; i++)
+                                            {
+                                                if (goodBadList[i] == "G")
+                                                    {
+                                                        newDiv = document.createElement("div");
+                                                        newDiv.classList.add("green");
+                                                        newText = document.createElement("p");
+                                                        newText.textContent = value[i].toString();
+                                                        newDiv.appendChild(newText);
+                                                        goodBadText.appendChild(newDiv);
+                                                    }
+                                                if (goodBadList[i] == "B")
+                                                    {
+                                                        newDiv = document.createElement("div");
+                                                        newDiv.classList.add("red");
+                                                        newText = document.createElement("p");
+                                                        newText.textContent = value[i].toString();
+                                                        newDiv.appendChild(newText);
+                                                        goodBadText.appendChild(newDiv);
+                                                    }
+                                                }
+                                        }
+                                        else
+                                        {
+                                            for (let i = 0; i < 10000; i++)
+                                                {
+                                                    if (goodBadList[i] == "G")
+                                                        {
+                                                            newDiv = document.createElement("div");
+                                                            newDiv.classList.add("green");
+                                                            newText = document.createElement("p");
+                                                            newText.textContent = value[i].toString();
+                                                            newDiv.appendChild(newText);
+                                                            goodBadText.appendChild(newDiv);
+                                                        }
+                                                    if (goodBadList[i] == "B")
+                                                        {
+                                                            newDiv = document.createElement("div");
+                                                            newDiv.classList.add("red");
+                                                            newText = document.createElement("p");
+                                                            newText.textContent = value[i].toString();
+                                                            newDiv.appendChild(newText);
+                                                            goodBadText.appendChild(newDiv);
+                                                        }
+                                                    }
+                                        }
+                                    
                                     newDiv = document.createElement("div");
                                     newDiv.classList.add("red");
                                     newText = document.createElement("p");
