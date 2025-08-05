@@ -5,3 +5,53 @@
     vertical-align: baseline;
     max-width: 100%;
 }
+@media (min-width: 768px)
+{ 
+    /*Tablets*/
+    nav
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-item
+    {
+        width: Calc((100% / 3) - 1.2em);
+    }
+    main article, main section
+    {
+        width: 75%;
+        height: 75vh;
+        margin-bottom: 2.5em;
+    }
+    main
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 88vh;
+    }
+}
+@media (min-width: 1024px)
+{
+    /*Computers*/
+    main article, main section
+    {
+        width: 70%;
+        height: 87.5vh;
+        margin-bottom: 4.5em;
+    }
+    main
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    main #digitcheck
+    {
+        height: 86vh;
+        margin-bottom: 3.9em;
+    }
+}
