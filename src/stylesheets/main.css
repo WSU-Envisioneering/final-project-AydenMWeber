@@ -34,17 +34,17 @@ footer
     bottom: 0;
     width:calc(100% - 1.35em);
     color: white;
+    background-color:#246e2e;
 }
 footer, header
 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #3ef04d;
     height:3em;
     border-width: 3px;
     border-style: solid;
-    border-image: linear-gradient(to bottom, #70ff7c, #27b333);
+    border-image: linear-gradient(to top, #2c8337, #27b333);
     border-image-slice: 1;
 }
 header img
